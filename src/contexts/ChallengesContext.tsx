@@ -78,7 +78,7 @@ export function ChallengesProvider({
 
     new Audio('/notification.mp3').play();
 
-    if (Notification.permission === 'granted') {
+    if (Notification.permission === 'granted' && screen.width > 720) {
       new Notification('Novo desafio 🎉', {
         body: `Ciclo terminado. Ganhe ${challenges[randomChallengeIndex].amount}xp! `,
       });
